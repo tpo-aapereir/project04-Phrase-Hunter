@@ -6,29 +6,29 @@
  * initial activePhrase is set to null
 */
 
- class Game {
-    constructor() {
-        this.missed = 0
-        this.phrases = [
-            new Phrase('May the Force be with you'),
-            new Phrase('For the Alliance'),
-            new Phrase('The road goes ever on and on'),
-            new Phrase('More human than human is our motto'),
-            new Phrase('This is the weapon of a jedi knight'),
-            new Phrase('To boldy go where no one has gone before'),
-            new Phrase('The Force is strong in my family'),
-            new Phrase('We named the dog Indiana'),
-            new Phrase('Dont call me Junior')
-        ]
-        this.activePhrase = null
-}
+class Game {
+  constructor () {
+    this.missed = 0
+    this.phrases = [
+      new Phrase('May the Force be with you'),
+      new Phrase('For the Alliance'),
+      new Phrase('The road goes ever on and on'),
+      new Phrase('More human than human is our motto'),
+      new Phrase('This is the weapon of a jedi knight'),
+      new Phrase('To boldy go where no one has gone before'),
+      new Phrase('The Force is strong in my family'),
+      new Phrase('We named the dog Indiana'),
+      new Phrase('Dont call me Junior')
+    ]
+    this.activePhrase = null
+  }
 
- /**
+  /**
    * Begins game by selecting a random phrase and displaying it to user
    * also shows the heartContainer images
   **/
 
- startGame () {
+  startGame () {
     document.querySelectorAll('#phrase ul li')
       .forEach(li => li.parentNode.removeChild(li))
 
@@ -113,7 +113,7 @@
   * @param (string) outcome - 'win' for a win, 'lose' for a loss
   **/
 
- gameOver (outcome) {
+  gameOver (outcome) {
     document.querySelector('#overlay').style.display = 'inherit'
 
     if (outcome === 'win') {
