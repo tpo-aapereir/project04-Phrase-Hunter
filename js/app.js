@@ -18,6 +18,7 @@ startButton.addEventListener('click', () => {
   game.startGame()
 })
 
+// cick functionality onscreen keys
 screenKeys.forEach(key => {
   key.addEventListener('click', (e) => {
     const button = e.target
